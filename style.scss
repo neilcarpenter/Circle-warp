@@ -1,0 +1,134 @@
+@import url("http://fonts.googleapis.com/css?family=Carrois+Gothic|Sigmar+One");
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    font: normal 12px/14px "Carrois Gothic", sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+}
+
+body {
+    background: url(spinner.gif) no-repeat center center;
+}
+
+video {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+#canvas {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white url(spinner.gif) no-repeat center center;
+}
+
+h1 {
+    font: normal 24px/24px "Sigmar One", Helvetica, Arial;
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);    
+}
+
+#controls {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 20px;
+    width: 250px;
+    padding: 20px;
+    z-index: 15;
+    -webkit-transform-origin: top center;
+       -moz-transform-origin: top center;
+         -o-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+       -moz-transition:    -moz-transform .5s ease-in-out;
+         -o-transition:      -o-transform .5s ease-in-out;
+            transition:         transform .5s ease-in-out;
+}
+
+#controls.closed {
+    -webkit-transform: rotate(-180deg);
+       -moz-transform: rotate(-180deg);
+         -o-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+}
+
+.controller {
+    float: right;
+    width: 150px;
+}
+input[type='range'] {  
+    -webkit-appearance: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 40%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 60%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.toggle-controls {
+    position: absolute;
+    display: block;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 290px;
+    left: 0;
+    text-align: center;
+    padding: 3px 0 7px;
+    text-decoration: none;
+    color: white;
+    text-shadow: none;
+
+    &:hover {
+        background: rgb(0, 0, 0);
+    }
+}
+
+#close {
+    bottom: -20px;
+}
+
+#open {
+    top: -20px;
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    padding: 7px 10px;
+    box-shadow: 0 0 3px 0px rgba(255,255,255, 0.3);
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+p a {
+    color: #fff;
+
+    &:hover {
+        color: #FF0084;
+    }
+}
